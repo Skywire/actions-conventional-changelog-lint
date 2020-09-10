@@ -1,9 +1,12 @@
 name: 'conventional-changelog-lint'
 description: 'Validate a PRs commits match the Skywire conventional changelog standard'
 inputs:
-  commit_log:  # Module namespaces to check
-    description: 'A newline separated file of the commit messages to check'
+  token:
+    description: The github token from secrets.GITHUB_TOKEN
     required: true
+#  commit_log:  # Module namespaces to check
+#    description: 'A newline separated file of the commit messages to check'
+#    required: true
 runs:
   using: 'node12'
   main: 'index.js'
