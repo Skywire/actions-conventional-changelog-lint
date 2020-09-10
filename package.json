@@ -1,0 +1,15 @@
+{
+  "name": "@skywire-london/actions-conventional-changelog-lint",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tech+npm@skywire.co.uk",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.5",
+    "@skywire-london/conventional-changelog-lint": "^1.0.1"
+  }
+}
