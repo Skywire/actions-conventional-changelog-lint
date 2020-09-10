@@ -4,28 +4,21 @@ This action validates all of the commit messages in a pull request
 
 ## Inputs
 
-### `commit_log`
+### `token`
 
 **Required** A newline separated file of the commit messages to check.
-
-The commit log can be generated with:
-
-```yaml
-steps:
-    - id: generate_log  
-    - run: |
-        curl -o out.json \
-            --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-            ${{ github.event.pull_request.commits_url }}
-    
-        cat out.json | jq '.[] .commit .message' > commits.txt
-```
 
 ## Example usage
 
 ```yaml
--   name: Lint PR commit messages 
-    uses: skywire/actions-conventional-changelog-lint@master
-    with:
-        commit_log: commits.txt
+name: Lint pull request commits
+on: pull_request
+jobs:
+    commit_lint:
+        runs-on: ubuntu-16.04
+        steps:
+            -   name: Lint PR commit messages
+                uses: skywire/actions-conventional-changelog-lint@1.0.0
+                with:
+                    token: ${{ secrets.GITHUB_TOKEN }}
 ```
