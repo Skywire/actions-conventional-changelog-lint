@@ -10,6 +10,6 @@
   "dependencies": {
     "@actions/core": "^1.2.5",
     "@actions/github": "^4.0.0",
-    "@skywire-london/conventional-changelog-lint": "^1.0.1"
+    "@skywire-london/conventional-changelog-lint": "^2.0"
   }
 }
