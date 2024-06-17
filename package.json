@@ -1,15 +1,15 @@
 {
-  "name": "@skywire-london/actions-conventional-changelog-lint",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "tech+npm@skywire.co.uk",
-  "license": "ISC",
-  "dependencies": {
-    "@actions/core": "^1.2.5",
-    "@actions/github": "^4.0.0",
-    "@skywire-london/conventional-changelog-lint": "^2.0"
-  }
+    "name": "@skywire-london/actions-conventional-changelog-lint",
+    "version": "2.0.1",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "tech+npm@skywire.co.uk",
+    "license": "ISC",
+    "dependencies": {
+        "@actions/core": "^1.2.5",
+        "@actions/github": "^4.0.0",
+        "@skywire-london/conventional-changelog-lint": "^2.0"
+    }
 }
