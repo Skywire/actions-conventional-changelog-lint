@@ -1,9 +1,9 @@
-name: 'conventional-changelog-lint'
-description: 'Validate a PRs commits match the Skywire conventional changelog standard'
+name: "conventional-changelog-lint"
+description: "Validate a PRs commits match the Skywire conventional changelog standard"
 inputs:
-  token:
-    description: The github token from secrets.GITHUB_TOKEN
-    required: true
+    token:
+        description: The github token from secrets.GITHUB_TOKEN
+        required: true
 runs:
-  using: 'node12'
-  main: 'index.js'
+    using: "node20"
+    main: "index.js"
