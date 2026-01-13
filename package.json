@@ -8,8 +8,8 @@
     "author": "tech+npm@skywire.co.uk",
     "license": "ISC",
     "dependencies": {
-        "@actions/core": "^1.2.5",
-        "@actions/github": "^4.0.0",
+        "@actions/core": "^2.0.1",
+        "@actions/github": "^7.0.0",
         "@skywire-london/conventional-changelog-lint": "^2.0"
     }
 }
