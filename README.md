@@ -15,7 +15,7 @@ name: Lint pull request commits
 on: pull_request
 jobs:
     commit_lint:
-        runs-on: ubuntu-16.04
+        runs-on: ubuntu-slim
         steps:
             - name: Lint PR commit messages
               uses: skywire/actions-conventional-changelog-lint@2.2.0
