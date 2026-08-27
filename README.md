@@ -18,7 +18,7 @@ jobs:
         runs-on: ubuntu-slim
         steps:
             - name: Lint PR commit messages
-              uses: skywire/actions-conventional-changelog-lint@2.3.2
+              uses: skywire/actions-conventional-changelog-lint@2.3.3
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
 ```

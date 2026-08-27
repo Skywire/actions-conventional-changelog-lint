@@ -19,7 +19,11 @@ octokit.rest.pulls
 			const sha = commit.sha;
 			const message = commit.commit.message.split("\n").shift();
 
-			if (message.startsWith("Merge pull request")) {
+			if (
+				message.startsWith("Merge pull request") ||
+				message.startsWith("Merge branch") ||
+				message.startsWith("Revert")
+			) {
 				return;
 			}
 
