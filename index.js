@@ -6,7 +6,7 @@ const payload = github.context.payload;
 const token = core.getInput("token");
 const octokit = github.getOctokit(token);
 
-octokit.pulls
+octokit.rest.pulls
 	.listCommits({
 		owner: payload.repository.owner.login,
 		repo: payload.repository.name,
@@ -19,7 +19,11 @@ octokit.pulls
 			const sha = commit.sha;
 			const message = commit.commit.message.split("\n").shift();
 
-			if (message.startsWith("Merge pull request")) {
+			if (
+				message.startsWith("Merge pull request") ||
+				message.startsWith("Merge branch") ||
+				message.startsWith("Revert")
+			) {
 				return;
 			}
 
