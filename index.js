@@ -18,6 +18,10 @@ octokit.pulls.listCommits({
         let sha = commit.sha;
         let message = commit.commit.message.split("\n").shift();
 
+        if (message.startsWith('Merge pull request')) {
+            return;
+        }
+
         if (!lint.validateFormat(message)) {
             try {
                 lint.lint(message);
