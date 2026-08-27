@@ -6,7 +6,7 @@ const payload = github.context.payload;
 const token = core.getInput("token");
 const octokit = github.getOctokit(token);
 
-octokit.pulls
+octokit.rest.pulls
 	.listCommits({
 		owner: payload.repository.owner.login,
 		repo: payload.repository.name,
